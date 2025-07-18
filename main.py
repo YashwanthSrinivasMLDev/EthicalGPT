@@ -50,12 +50,14 @@ prompt = ChatPromptTemplate.from_template(prompt_template)
 #creating agent chain using langchain
 # agent_chain = prompt | llm
 
+vector_db_retriever = create_vector_retriever()
+document_chain = create_stuff_documents_chain(llm, prompt)
+retrieval_chain = create_retrieval_chain(vector_db_retriever, document_chain)
 
-def create_retrieval_chain_custom() :
-    vector_db_retriever = create_vector_retriever()
-    document_chain = create_stuff_documents_chain(llm, prompt)
-    temp_retrieval_chain = create_retrieval_chain(vector_db_retriever, document_chain)
-    return temp_retrieval_chain
+
+# def create_retrieval_chain_custom() :
+#     # vector_db_retriever = create_vector_retriever()
+#     return temp_retrieval_chain
 
 # retrieval_chain= create_retrieval_chain()
 # query = "is eating an animal ethically correct?"
