@@ -1,0 +1,13 @@
+import streamlit as st
+from main import create_retrieval_chain
+st.title('Ethical ChatGPT')
+
+question = st.text_input("Type your question here")
+
+retrieval_chain = create_retrieval_chain()
+query = "is eating an animal ethically correct?"
+response = retrieval_chain.invoke( {'input':question })
+print(response['answer'])
+
+st.header("Answer : ")
+st.write(response['answer'])
