@@ -51,7 +51,7 @@ prompt = ChatPromptTemplate.from_template(prompt_template)
 # agent_chain = prompt | llm
 
 
-def create_retrieval_chain() :
+def create_retrieval_chain_custom() :
     vector_db_retriever = create_vector_retriever()
     document_chain = create_stuff_documents_chain(llm, prompt)
     temp_retrieval_chain = create_retrieval_chain(vector_db_retriever, document_chain)
