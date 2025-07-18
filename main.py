@@ -12,8 +12,8 @@ import streamlit as st
 # load_dotenv()
 
 #create a llm
-# groq_api_key= os.environ['GROQ_API_KEY']
-groq_api_key= st.secrets['GROQ_API_KEY']
+groq_api_key= os.environ.get('GROQ_API_KEY')
+# groq_api_key= st.secrets['GROQ_API_KEY']
 llm = ChatGroq(model_name='llama-3.1-8b-instant', temperature=0, max_tokens=None, timeout=None, api_key=groq_api_key)
 
 #embedding
