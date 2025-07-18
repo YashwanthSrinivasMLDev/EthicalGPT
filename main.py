@@ -7,11 +7,12 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain.prompts import  ChatPromptTemplate
+from dotenv import load_dotenv
 
+load_dotenv()
 
 #create a llm
-os.environ['GROQ_API_KEY'] = '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'
-groq_api_key = "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"
+groq_api_key= os.environ['GROQ_API_KEY']
 llm = ChatGroq(model_name='llama-3.1-8b-instant', temperature=0, max_tokens=None, timeout=None, api_key=groq_api_key)
 
 #embedding
