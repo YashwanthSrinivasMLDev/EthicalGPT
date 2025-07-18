@@ -1,12 +1,8 @@
-Pillow==11.3.0
-protobuf==6.31.1
 streamlit==1.47.0
-tornado==6.5.1
 langchain
 langchain-community
 langchain-groq
 langchain-core
-langchain-community
 langchain-text-splitters
 sentence-transformers
 unstructured
