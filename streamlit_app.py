@@ -6,8 +6,8 @@ st.title('Ethical ChatGPT')
 question = st.text_input("Type your question here")
 
 # retrieval_chain = create_retrieval_chain_custom()
-response = retrieval_chain.invoke( {'input':question })
+if question :
+    response = retrieval_chain.invoke( {'input':question })
 # print(response['answer'])
-
-st.header("Answer : ")
-st.write(response['answer'])
+    st.header("Answer : ")
+    st.write(response['answer'])
