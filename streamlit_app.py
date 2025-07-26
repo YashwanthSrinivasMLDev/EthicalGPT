@@ -3,7 +3,7 @@ import streamlit as st
 from main import retrieval_chain
 st.title('Ethical ChatGPT')
 #app info
-st.markdown("######ChatGPT but with the ethics of an animal rights activist")
+st.markdown("###### ChatGPT but with the ethics of an animal rights activist")
 # st.markdown("###### Your Text")
 question = st.text_input("Type your question here")
 
