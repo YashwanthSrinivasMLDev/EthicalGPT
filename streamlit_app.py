@@ -4,11 +4,10 @@ from main import retrieval_chain
 st.title('Ethical ChatGPT')
 
 #app info
-st.header("ChatGPT but with the ethics of an animal rights activist")
+st.subheader("ChatGPT but with the ethics of an animal rights activist")
 
 question = st.text_input("Type your question here")
 
-question = st.text_input("Type your question here")
 
 # retrieval_chain = create_retrieval_chain_custom()
 if question :
